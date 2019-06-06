@@ -4,7 +4,7 @@
 
 *June 2019*
 
-> 🔨 React Native Tutorial 'Développez une application mobile React Native' from [Openclassrooms](https://openclassrooms.com/fr/courses/4902061-developpez-une-application-mobile-react-native?status=published). The goal of this tutorial is to develop a video library mobile application.
+> 🔨 Tutorial 'Développez une application mobile React Native' from [Openclassrooms](https://openclassrooms.com/fr/courses/4902061-developpez-une-application-mobile-react-native?status=published). The goal of this tutorial is to develop a video library mobile application.
 
 
 * * *
