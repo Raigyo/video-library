@@ -1,4 +1,4 @@
-# Becode - React Native - Video Library -  WIP
+# Becode - React Native (CRNA) - Video Library -  WIP
 
 ![Becode logo](https://raw.githubusercontent.com/Raigyo/react-character-manager/master/img/becode-logo.png)
 
@@ -9,7 +9,7 @@
 
 * * *
 
-[]
+[x] React Native Init vs Create-React-Native-App
 
 []
 
