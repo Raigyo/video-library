@@ -17,11 +17,13 @@
 
 [x] Props & States
 
-[x] API & Token
+[x] API & Token /Fetch
 
 ## Features
 
 **WIP**
+
+Video Library mobile application displaying movies and their descriptions using API TMDB.
 
 ## Installing
 

@@ -1,15 +1,47 @@
 // Components/Search.js
 import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native'
-import films from '../Helpers/filmsData'
+//import films from '../Helpers/filmsData'
 import FilmItem from './FilmItem'
+import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'   // import { } from ... because it's an export from TMDBApi.js
 
 class Search extends React.Component {
+
+  constructor(props) {
+    super(props)
+    //here we will create the properties of the component custom Search
+    searchedText = "" //outside the state because we don't want to rerender each time user insert a letter
+    this.state = {
+      films: [],
+    }
+  }
+
+  // underscore means private method, not effective btw, because JS doesn't take private/public modifier into account
+    _loadFilms() {
+      if (this.searchedText.length > 0) { // if field is not empty
+        getFilmsFromApiWithSearchedText(this.searchedText).then(data => {
+            this.setState({ films: data.results })
+        })
+      }
+    }
+
+    _searchTextInputChanged(text) {
+        this.searchedText = text
+    }
+
     render() {
         return (
           <View style={styles.main_container}>
-            <TextInput style={styles.textinput} placeholder='Movie title'/>
-            <Button style={styles.textinput}  title='Search' onPress={() => {}}/>
+            <TextInput
+              style={styles.textinput}
+              placeholder='Movie title'
+              onChangeText={(text) => this._searchTextInputChanged(text)}
+            />
+            <Button
+              style={styles.textinput}
+              title='Search'
+              onPress={() => this._loadFilms()}
+            />
                {/*
                <FlatList
                  data={this.state.dataSource}
@@ -17,7 +49,8 @@ class Search extends React.Component {
                />
               */}
             <FlatList
-              data={films}
+              //data={films}
+              data={this.state.films}
               keyExtractor={(item) => item.id.toString()}
               //we send the prop film -that content the current film items in the loop- to FilmItem
               renderItem={({item}) => <FilmItem film={item}/>}
