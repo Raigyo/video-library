@@ -25,7 +25,7 @@
 
 ## Installing
 
-### API
+### API: request your token
 
 Connect and suscribe to [API TMDB (The Movie DataBase)](https://www.themoviedb.org/) and ask for a token/api key (v3 auth).
 
