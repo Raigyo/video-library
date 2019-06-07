@@ -15,11 +15,21 @@
 
 [x] JSX / Styles / Flexbox
 
-[]
+[x] Props & States
+
+[x] API & Token
 
 ## Features
 
 **WIP**
+
+## Installing
+
+### API
+
+Connect and suscribe to [API TMDB (The Movie DataBase)](https://www.themoviedb.org/) and ask for a token/api key (v3 auth).
+
+Rename **API/TMDBApi.exemple.js** in **API/TMDBApi.js** and replace `<YOUR_TOKEN_HERE>` by the token provided by API TMDB.
 
 ## Useful links
 
@@ -54,6 +64,8 @@
 ### React Native - Development
 
 [Openclassrooms: Développez une application mobile React Native](https://openclassrooms.com/fr/courses/4902061-developpez-une-application-mobile-react-native?status=published)
+
+[API TMDB (The Movie DataBase)](https://www.themoviedb.org/documentation/api?language=fr)
 
 [Components and APIs](https://facebook.github.io/react-native/docs/components-and-apis.html#basic-components)
 

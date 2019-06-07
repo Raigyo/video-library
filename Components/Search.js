@@ -10,11 +10,16 @@ class Search extends React.Component {
           <View style={styles.main_container}>
             <TextInput style={styles.textinput} placeholder='Movie title'/>
             <Button style={styles.textinput}  title='Search' onPress={() => {}}/>
+               {/*
+               <FlatList
+                 data={this.state.dataSource}
+                 renderItem={({item}) => <Text>{item.key}</Text>
+               />
+              */}
             <FlatList
               data={films}
               keyExtractor={(item) => item.id.toString()}
-              //renderItem={({item}) => <Text>{item.title}</Text>}
-              //renderItem={({item}) => <FilmItem/>}
+              //we send the prop film -that content the current film items in the loop- to FilmItem
               renderItem={({item}) => <FilmItem film={item}/>}
             />
           </View>

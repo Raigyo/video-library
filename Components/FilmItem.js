@@ -5,6 +5,7 @@ import { StyleSheet, View, Text, Image } from 'react-native'
 
 class FilmItem extends React.Component {
   render() {
+    //we retrieve the prop with the crurrent film from Search.js
       const film = this.props.film
       return (
         <View style={styles.main_container}>
