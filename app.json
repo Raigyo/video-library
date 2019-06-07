@@ -24,6 +24,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "Tuto: https://openclassrooms.com/fr/courses/4902061-developpez-une-application-mobile-react-native",
+    "githubUrl": "https://github.com/Raigyo/video-library"
   }
 }
