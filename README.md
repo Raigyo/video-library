@@ -11,9 +11,9 @@
 
 [x] React Native Init vs Create-React-Native-App
 
-[]
+[x] Components
 
-[]
+[x] JSX / Styles / Flexbox
 
 []
 
@@ -48,3 +48,13 @@
 [Expo: Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent)
 
 [React Native Git Upgrade](https://www.npmjs.com/package/react-native-git-upgrade/v/0.3.0-beta.1)
+
+[React Native Init VS Expo](https://blog.nano3labs.com/react-native-init-vs-expo-in-sept-2018-6d2f2db65f9e)
+
+### React Native - Development
+
+[Openclassrooms: Développez une application mobile React Native](https://openclassrooms.com/fr/courses/4902061-developpez-une-application-mobile-react-native?status=published)
+
+[Components and APIs](https://facebook.github.io/react-native/docs/components-and-apis.html#basic-components)
+
+[React Native Styling Cheat Sheet](https://github.com/vhpoet/react-native-styling-cheat-sheet)
