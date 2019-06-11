@@ -1,9 +1,9 @@
 // Components/Search.js
+
 import React from 'react'
-import { ActivityIndicator, StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native'
-//import films from '../Helpers/filmsData'
+import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator } from 'react-native'
 import FilmItem from './FilmItem'
-import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'   // import { } from ... because it's an export from TMDBApi.js
+import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
 
 class Search extends React.Component {
 
@@ -11,61 +11,84 @@ class Search extends React.Component {
     super(props)
     //here we will create the properties of the component custom Search
     searchedText = "" //outside the state because we don't want to rerender each time user insert a letter
+    this.page = 0 // Counter to know the current page
+    this.totalPages = 0 // Number of total pages send by the API
     this.state = {
       films: [],
       isLoading: false // by default false because it doesn't load anything
     }
   }
 
-  // underscore means private method, not effective btw, because JS doesn't take private/public modifier into account
-    _loadFilms() {
-      if (this.searchedText.length > 0) { // if field is not empty
-        getFilmsFromApiWithSearchedText(this.searchedText).then(data => {
-            this.setState({
-              films: data.results,
-              isLoading: false // stop loading logo because the content has been loaded
-             })
-
-        })
-      }
+  _loadFilms() {
+    if (this.searchedText.length > 0) { // if field is not empty
+      this.setState({ isLoading: true }) // Launch loading
+      getFilmsFromApiWithSearchedText(this.searchedText, this.page+1).then(data => {
+          this.page = data.page
+          this.totalPages = data.total_pages
+          this.setState({
+            //films: data.results, //if we keep that we will loose all the previos movies stored in the state
+            films: [ ...this.state.films, ...data.results ], // == films: this.state.films.concat(data.results), we need an array to store all the movies
+            isLoading: false // stop loading logo because the content has been loaded
+          })
+      })
     }
+  }
 
-    _searchTextInputChanged(text) {
-        this.searchedText = text
-    }
+  _searchTextInputChanged(text) {
+    this.searchedText = text
+  }
 
-    render() {
-      console.log(this.state.isLoading)
-        return (
-          <View style={styles.main_container}>
-            <TextInput
-              style={styles.textinput}
-              placeholder='Movie title'
-              onChangeText={(text) => this._searchTextInputChanged(text)}
-              //props onSubmitEditing - https://facebook.github.io/react-native/docs/textinput.html#props
-              onSubmitEditing={() => this._loadFilms()}
-            />
-            <Button
-              style={styles.textinput}
-              title='Search'
-              onPress={() => this._loadFilms()}
-            />
-               {/*
-               <FlatList
-                 data={this.state.dataSource}
-                 renderItem={({item}) => <Text>{item.key}</Text>
-               />
-              */}
-            <FlatList
-              //data={films}
-              data={this.state.films}
-              keyExtractor={(item) => item.id.toString()}
-              //we send the prop film -that content the current film items in the loop- to FilmItem
-              renderItem={({item}) => <FilmItem film={item}/>}
-            />
-          </View>
-        )
+  _searchFilms() {
+    // we set everything at zero in the state
+    this.page = 0
+    this.totalPages = 0
+    //callback because we don't want to use asynchrone function
+    this.setState({
+      films: [],
+    }, () => {
+        console.log("Page : " + this.page + " / TotalPages : " + this.totalPages + " / Number of movies : " + this.state.films.length)
+        this._loadFilms()
+    })
+  }
+
+  _displayLoading() {
+    if (this.state.isLoading) {
+      return (
+        <View style={styles.loading_container}>
+          <ActivityIndicator size='large' />
+        </View>
+      )
     }
+  }
+
+  render() {
+    //console.log(this.state.isLoading)
+    return (
+      <View style={styles.main_container}>
+        <TextInput
+          style={styles.textinput}
+          placeholder='Movie title'
+          onChangeText={(text) => this._searchTextInputChanged(text)}
+          //props onSubmitEditing - https://facebook.github.io/react-native/docs/textinput.html#props
+          onSubmitEditing={() => this._searchFilms()}
+        />
+        <Button title='Search' onPress={() => this._searchFilms()}/>
+        <FlatList
+          data={this.state.films}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={({item}) => <FilmItem film={item}/>}
+          onEndReachedThreshold={0.5}
+          onEndReached={() => {
+              console.log("onEndReached")
+              if (this.page < this.totalPages) {
+                 this._loadFilms()
+              }
+          }}
+        />
+        {this._displayLoading()}
+      </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
@@ -80,6 +103,16 @@ const styles = StyleSheet.create({
     borderColor: '#000000',
     borderWidth: 1,
     paddingLeft: 5
+  },
+  loading_container: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 100,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 })
+
 export default Search
