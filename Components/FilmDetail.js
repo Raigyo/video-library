@@ -1,7 +1,8 @@
 // Components/FilmDetail.js
 
 import React from 'react'
-import { StyleSheet, View, Text, ActivityIndicator } from 'react-native'
+import { StyleSheet, View, Text, ActivityIndicator, ScrollView } from 'react-native'
+import { getFilmDetailFromApi } from '../API/TMDBApi'
 
 class FilmDetail extends React.Component {
   constructor(props) {
@@ -12,25 +13,44 @@ class FilmDetail extends React.Component {
     }
   }
 
-_displayLoading() {
-  if (this.state.isLoading) {
-    // if true : display loading screen
-    return (
-      <View style={styles.loading_container}>
-        <ActivityIndicator size='large' />
-      </View>
-    )
+  componentDidMount() {
+    getFilmDetailFromApi(this.props.navigation.state.params.idFilm).then(data => {
+      this.setState({
+        film: data,
+        isLoading: false
+      })
+    })
   }
-}
 
+  _displayLoading() {
+    if (this.state.isLoading) {
+      // if true : display loading screen
+      return (
+        <View style={styles.loading_container}>
+          <ActivityIndicator size='large' />
+        </View>
+      )
+    }
+  }
 
-render() {
+  _displayFilm() {
+    if (this.state.film != undefined) {
+      return (
+        <ScrollView style={styles.scrollview_container}>
+          <Text>{this.state.film.title}</Text>
+        </ScrollView>
+      )
+    }
+  }
+
+  render() {
   return (
     <View style={styles.main_container}>
       {this._displayLoading()}
+      {this._displayFilm()}
     </View>
   )
-}
+  }
 }
 
 const styles = StyleSheet.create({
@@ -45,6 +65,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  scrollview_container: {
+    flex: 1
   }
 })
 

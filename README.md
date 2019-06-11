@@ -21,7 +21,7 @@
 
 [x] Asynchrone vs Callback
 
-[x] Navigation with StackNavigator, touchable views with TouchableOpacity
+[x] Navigation with StackNavigator, touchable views with TouchableOpacity, ScrollView...
 
 [x] Component Lifecycle
 
