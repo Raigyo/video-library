@@ -61,6 +61,11 @@ class Search extends React.Component {
     }
   }
 
+  _displayDetailForFilm = (idFilm) => {
+    console.log("Display film with id " + idFilm)
+    this.props.navigation.navigate("FilmDetail", { idFilm: idFilm })
+  }
+
   render() {
     //console.log(this.state.isLoading)
     return (
@@ -76,7 +81,7 @@ class Search extends React.Component {
         <FlatList
           data={this.state.films}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({item}) => <FilmItem film={item}/>}
+          renderItem={({item}) => <FilmItem film={item} displayDetailForFilm={this._displayDetailForFilm} />}
           onEndReachedThreshold={0.5}
           onEndReached={() => {
             //console.log("onEndReached")
@@ -94,7 +99,7 @@ class Search extends React.Component {
 const styles = StyleSheet.create({
   main_container: {
     flex: 1,
-    marginTop: 20
+    //marginTop: 20 // managed by StackNavigator
   },
   textinput: {
     marginLeft: 5,

@@ -17,7 +17,13 @@
 
 [x] Props & States
 
-[x] API & Token /Fetch
+[x] API & Token / Fetch
+
+[x] Asynchrone vs Callback
+
+[x] Navigation with StackNavigator, touchable views with TouchableOpacity
+
+[x] Component Lifecycle
 
 ## Features
 
