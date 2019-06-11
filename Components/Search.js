@@ -46,7 +46,7 @@ class Search extends React.Component {
     this.setState({
       films: [],
     }, () => {
-        console.log("Page : " + this.page + " / TotalPages : " + this.totalPages + " / Number of movies : " + this.state.films.length)
+        //console.log("Page : " + this.page + " / TotalPages : " + this.totalPages + " / Number of movies : " + this.state.films.length)
         this._loadFilms()
     })
   }
@@ -79,7 +79,7 @@ class Search extends React.Component {
           renderItem={({item}) => <FilmItem film={item}/>}
           onEndReachedThreshold={0.5}
           onEndReached={() => {
-              console.log("onEndReached")
+            //console.log("onEndReached")
               if (this.page < this.totalPages) {
                  this._loadFilms()
               }
