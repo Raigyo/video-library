@@ -6,3 +6,5 @@ npm-debug.*
 *.key
 *.mobileprovision
 API/TMDBApi.js
+report.*
+package-lock.json

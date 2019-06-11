@@ -1,6 +1,6 @@
 // Components/Search.js
 import React from 'react'
-import { StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native'
+import { ActivityIndicator, StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native'
 //import films from '../Helpers/filmsData'
 import FilmItem from './FilmItem'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'   // import { } from ... because it's an export from TMDBApi.js
@@ -13,6 +13,7 @@ class Search extends React.Component {
     searchedText = "" //outside the state because we don't want to rerender each time user insert a letter
     this.state = {
       films: [],
+      isLoading: false // by default false because it doesn't load anything
     }
   }
 
@@ -20,7 +21,11 @@ class Search extends React.Component {
     _loadFilms() {
       if (this.searchedText.length > 0) { // if field is not empty
         getFilmsFromApiWithSearchedText(this.searchedText).then(data => {
-            this.setState({ films: data.results })
+            this.setState({
+              films: data.results,
+              isLoading: false // stop loading logo because the content has been loaded
+             })
+
         })
       }
     }
@@ -30,12 +35,15 @@ class Search extends React.Component {
     }
 
     render() {
+      console.log(this.state.isLoading)
         return (
           <View style={styles.main_container}>
             <TextInput
               style={styles.textinput}
               placeholder='Movie title'
               onChangeText={(text) => this._searchTextInputChanged(text)}
+              //props onSubmitEditing - https://facebook.github.io/react-native/docs/textinput.html#props
+              onSubmitEditing={() => this._loadFilms()}
             />
             <Button
               style={styles.textinput}
