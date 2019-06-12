@@ -37,7 +37,18 @@ class FilmDetail extends React.Component {
     if (this.state.film != undefined) {
       return (
         <ScrollView style={styles.scrollview_container}>
-          <Text>{this.state.film.title}</Text>
+          <Text>
+          {this.state.film.title}
+          // - Background / backdrop_path
+          // - Titre / title
+          // - Resumé / overview
+          // - Sortie / release_date
+          // - Notes / vote_average
+          // - Votes / vote_count
+          // - Budget / budget
+          // - Genre / genres
+          // - Compagnie / production_companie
+          </Text>
         </ScrollView>
       )
     }
