@@ -33,6 +33,12 @@ Video Library mobile application displaying movies and their descriptions using 
 
 ## Installing
 
+Libraries:
+
+`npm install --save moment`
+
+`npm install --save numeral`
+
 ### API: request your token
 
 Connect and suscribe to [API TMDB (The Movie DataBase)](https://www.themoviedb.org/) and ask for a token/api key (v3 auth).

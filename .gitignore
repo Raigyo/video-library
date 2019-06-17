@@ -8,3 +8,4 @@ npm-debug.*
 API/TMDBApi.js
 report.*
 package-lock.json
+package-lock.*
