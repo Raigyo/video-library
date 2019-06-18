@@ -31,19 +31,42 @@
 
 Video Library mobile application displaying movies and their descriptions using API TMDB.
 
-## Installing
-
-Libraries:
-
-`npm install --save moment`
-
-`npm install --save numeral`
-
 ### API: request your token
 
 Connect and suscribe to [API TMDB (The Movie DataBase)](https://www.themoviedb.org/) and ask for a token/api key (v3 auth).
 
 Rename **API/TMDBApi.exemple.js** in **API/TMDBApi.js** and replace `<YOUR_TOKEN_HERE>` by the token provided by API TMDB.
+
+## Libraries used:
+
+`npm install --save moment`
+
+`npm install --save numeral`
+
+## Redux
+
+~~~~
+npm install --save redux
+
+npm install --save react-redux
+
+npm install
+~~~~
+
+- L'utilisateur clique sur le bouton "Favoris" dans le component FilmDetail.
+
+- On crée une action avec le type "TOGGLE_FAVORITE"  et en valeur, le film affiché.
+
+- On fait passer l'action au store Redux.
+
+- Le store Redux donne l'action (dispatch) à un reducer capable de gérer l'action de type "TOGGLE_FAVORITE".
+
+- Le reducer  toggleFavorite  va recevoir l'action et va modifier le state de votre application.
+
+- Redux va détecter un changement dans son store, sur la liste des films favoris, et va envoyer la nouvelle liste de films favoris aux components abonnés à ses changements.
+
+- Le component FilmDetail reçoit la liste des nouveaux films, la mappe à ses props et lance le cycle de vie updating pour se re-rendre.
+
 
 ## Useful links
 
