@@ -5,6 +5,7 @@ import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image } from 're
 import { getFilmDetailFromApi, getImageFromApi } from '../API/TMDBApi'
 import moment from 'moment'
 import numeral from 'numeral'
+import { connect } from 'react-redux'
 
 class FilmDetail extends React.Component {
   constructor(props) {
@@ -118,4 +119,9 @@ const styles = StyleSheet.create({
   }
 })
 
-export default FilmDetail
+const mapStateToProps = (state) => {
+  return state
+}
+
+//mapStateToProps in connect  => connect  state chenges /store and component
+export default connect(mapStateToProps)(FilmDetail)
