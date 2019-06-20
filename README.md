@@ -25,6 +25,8 @@
 
 [x] Component Lifecycle
 
+[x] Redux
+
 ## Features
 
 **WIP**
