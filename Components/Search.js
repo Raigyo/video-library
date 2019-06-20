@@ -4,6 +4,7 @@ import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator } from 'react-native'
 import FilmItem from './FilmItem'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
+import { connect } from 'react-redux'
 
 class Search extends React.Component {
 
@@ -80,11 +81,22 @@ class Search extends React.Component {
         <Button title='Search' onPress={() => this._searchFilms()}/>
         <FlatList
           data={this.state.films}
+          extraData={this.props.favoritesFilm}
+          // We use the extraData prop to tell our FlatList that more data needs
+          // to be taken into account when asked to re-render
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({item}) => <FilmItem film={item} displayDetailForFilm={this._displayDetailForFilm} />}
+          renderItem={({item}) =>
+            <FilmItem film={item}
+            // add a props isFilmFavorite to display is favourite or not
+            isFilmFavorite={(this.props.favoritesFilm.findIndex(film => film.id === item.id) !== -1) ? true : false}
+            displayDetailForFilm={this._displayDetailForFilm}
+            />
+          }
           onEndReachedThreshold={0.5}
           onEndReached={() => {
             //console.log("onEndReached")
+            // We also check that we have not reached the end of the paging (totalPages)
+            // before loading more items
               if (this.page < this.totalPages) {
                  this._loadFilms()
               }
@@ -120,4 +132,12 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Search
+//We connect the store and states favorite movies
+// to our component Search
+const mapStateToProps = state => {
+  return {
+    favoritesFilm: state.favoritesFilm
+  }
+}
+
+export default connect(mapStateToProps)(Search)

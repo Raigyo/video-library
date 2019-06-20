@@ -14,7 +14,7 @@ function toggleFavorite(state = initialState, action) {
       // findIndex: find a value in an array, if false => -1
       const favoriteFilmIndex = state.favoritesFilm.findIndex(item => item.id === action.value.id)
       if (favoriteFilmIndex !== -1) {
-        // the movie is already in the favourite list: delete it
+        // the movie is already in the favourite list: remove it
         // copy of the state in a new object (using `...state`)
         // remove selected movie in the movie list with `filter` // returns a new array
         nextState = {

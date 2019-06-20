@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => {
   return {
-    favoritesFilm: state.favoritesFilm
+    favoritesFilm: state.favoritesFilm // do not mapp all the store
   }
 }
 
