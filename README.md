@@ -9,29 +9,37 @@
 
 * * *
 
+## Content of tutorial
+
 [x] React Native Init vs Create React Native App
 
 [x] Components React Native
 
-[x] JSX / Styles / Flexbox
-
-[x] Props & States
+[x] Properties (props) & States
 
 [x] API & Token / Fetch
 
-[x] Asynchrone vs Callback
+[x] Asynchrone and Callback functions
 
 [x] Component Lifecycle
 
-[x] Redux
+[x] Redux architecture (Actions - Reducers - Store - Views) and states management
 
-[x] Context of a component : This + Data Binding == Arrow functions
+[x] Context of a component (Data Binding)
+
+[x] Specific development (IOS vs Android)
 
 ## Features
 
 **WIP**
 
 Video Library mobile application displaying movies and their descriptions using API TMDB.
+
+You can display a page with a selected movie and its datas and add it to your favourites.
+
+You can see your favourite movie list using navigation bar.
+
+You can also share your favourite movie with your friend using a specific share button according the OS.
 
 ### API: request your token
 
