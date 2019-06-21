@@ -1,46 +1,59 @@
-// Navigation/Navigation.js
+// Navigation/Navigations.js
 
 import React from 'react'
-import { createStackNavigator, createAppContainer, createBottomTabNavigator } from 'react-navigation'
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image } from 'react-native'
+import { createStackNavigator, createBottomTabNavigator, createAppContainer } from 'react-navigation'
 import Search from '../Components/Search'
 import FilmDetail from '../Components/FilmDetail'
 import Favorites from '../Components/Favorites'
 
 const SearchStackNavigator = createStackNavigator({
-  Search: { // name of the view
-    screen: Search, //route
+  Search: {
+    screen: Search, // name of the view
     navigationOptions: {
-      title: 'Search'
+      title: 'Rechercher'
     }
   },
-  FilmDetail: { // name of the view
-    screen: FilmDetail //route
+  FilmDetail: {
+    screen: FilmDetail // name of the view
   }
 })
 
-const MoviesTabNavigator = createBottomTabNavigator({
-  Search: {
-    screen: SearchStackNavigator,
+const FavoritesStackNavigator = createStackNavigator({
+  Favorites: {
+    screen: Favorites, // name of the view
+    navigationOptions: {
+      title: 'Favoris'
+    }
+  },
+  FilmDetail: {
+    screen: FilmDetail // name of the view
+  }
+})
+
+const MoviesTabNavigator = createBottomTabNavigator(
+  {
+    Search: {
+      screen: SearchStackNavigator, // name of the view
       navigationOptions: {
         tabBarIcon: () => { //add icon
           return <Image
             source={require('../Images/ic_search.png')}
-            style={styles.icon}/> // style to resize
+            style={styles.icon}/>
         }
       }
-  },
-  Favorites: {
-    screen: Favorites,
-    navigationOptions: {
-      tabBarIcon: () => {//add icon
-        return <Image
-          source={require('../Images/ic_favorite.png')}
-          style={styles.icon}/>
+    },
+    Favorites: {
+      screen: FavoritesStackNavigator, // name of the view
+      navigationOptions: {
+        tabBarIcon: () => { //add icon
+          return <Image
+            source={require('../Images/ic_favorite.png')}
+            style={styles.icon}/>
+        }
       }
     }
-  }
-},
+  },
   {
     tabBarOptions: {
       activeBackgroundColor: '#DDDDDD', // background color for selected tabs
@@ -57,4 +70,5 @@ const styles = StyleSheet.create({
     height: 30
   }
 })
+
 export default createAppContainer(MoviesTabNavigator)

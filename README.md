@@ -1,4 +1,4 @@
-# Becode - React Native (CRNA) - Video Library -  WIP
+# Becode - React Native / Redux - Video Library -  WIP
 
 ![Becode logo](https://raw.githubusercontent.com/Raigyo/react-character-manager/master/img/becode-logo.png)
 
@@ -9,9 +9,9 @@
 
 * * *
 
-[x] React Native Init vs Create-React-Native-App
+[x] React Native Init vs Create React Native App
 
-[x] Components
+[x] Components React Native
 
 [x] JSX / Styles / Flexbox
 
@@ -21,11 +21,11 @@
 
 [x] Asynchrone vs Callback
 
-[x] Navigation with StackNavigator, touchable views with TouchableOpacity, ScrollView...
-
 [x] Component Lifecycle
 
 [x] Redux
+
+[x] Context of a component : This + Data Binding == Arrow functions
 
 ## Features
 

@@ -3,33 +3,32 @@
 import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator } from 'react-native'
 import FilmItem from './FilmItem'
+import FilmList from './FilmList'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
-import { connect } from 'react-redux'
 
 class Search extends React.Component {
 
   constructor(props) {
     super(props)
-    //here we will create the properties of the component custom Search
-    searchedText = "" //outside the state because we don't want to rerender each time user insert a letter
-    this.page = 0 // Counter to know the current page
-    this.totalPages = 0 // Number of total pages send by the API
+    this.searchedText = ""
+    this.page = 0
+    this.totalPages = 0
     this.state = {
       films: [],
-      isLoading: false // by default false because it doesn't load anything
+      isLoading: false
     }
+    this._loadFilms = this._loadFilms.bind(this) //reference to the context of the component Search even in FilmList if this._loadFilms is used
   }
 
   _loadFilms() {
-    if (this.searchedText.length > 0) { // if field is not empty
-      this.setState({ isLoading: true }) // Launch loading
+    if (this.searchedText.length > 0) {
+      this.setState({ isLoading: true })
       getFilmsFromApiWithSearchedText(this.searchedText, this.page+1).then(data => {
           this.page = data.page
           this.totalPages = data.total_pages
           this.setState({
-            //films: data.results, //if we keep that we will loose all the previos movies stored in the state
-            films: [ ...this.state.films, ...data.results ], // == films: this.state.films.concat(data.results), we need an array to store all the movies
-            isLoading: false // stop loading logo because the content has been loaded
+            films: [ ...this.state.films, ...data.results ],
+            isLoading: false
           })
       })
     }
@@ -40,15 +39,13 @@ class Search extends React.Component {
   }
 
   _searchFilms() {
-    // we set everything at zero in the state
     this.page = 0
     this.totalPages = 0
-    //callback because we don't want to use asynchrone function
     this.setState({
       films: [],
     }, () => {
-        //console.log("Page : " + this.page + " / TotalPages : " + this.totalPages + " / Number of movies : " + this.state.films.length)
-        this._loadFilms()
+      //console.log("Page : " + this.page + " / TotalPages : " + this.totalPages + " / Number of movies : " + this.state.films.length)
+      this._loadFilms()
     })
   }
 
@@ -62,45 +59,26 @@ class Search extends React.Component {
     }
   }
 
-  _displayDetailForFilm = (idFilm) => {
-    console.log("Display film with id " + idFilm)
-    this.props.navigation.navigate("FilmDetail", { idFilm: idFilm })
-  }
-
   render() {
-    //console.log(this.state.isLoading)
     return (
       <View style={styles.main_container}>
         <TextInput
           style={styles.textinput}
-          placeholder='Movie title'
+          placeholder='Titre du film'
           onChangeText={(text) => this._searchTextInputChanged(text)}
           //props onSubmitEditing - https://facebook.github.io/react-native/docs/textinput.html#props
           onSubmitEditing={() => this._searchFilms()}
         />
-        <Button title='Search' onPress={() => this._searchFilms()}/>
-        <FlatList
-          data={this.state.films}
-          extraData={this.props.favoritesFilm}
-          // We use the extraData prop to tell our FlatList that more data needs
-          // to be taken into account when asked to re-render
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({item}) =>
-            <FilmItem film={item}
-            // add a props isFilmFavorite to display is favourite or not
-            isFilmFavorite={(this.props.favoritesFilm.findIndex(film => film.id === item.id) !== -1) ? true : false}
-            displayDetailForFilm={this._displayDetailForFilm}
-            />
-          }
-          onEndReachedThreshold={0.5}
-          onEndReached={() => {
-            //console.log("onEndReached")
-            // We also check that we have not reached the end of the paging (totalPages)
-            // before loading more items
-              if (this.page < this.totalPages) {
-                 this._loadFilms()
-              }
-          }}
+        <Button title='Rechercher' onPress={() => this._searchFilms()}/>
+        <FilmList
+          films={this.state.films}
+          // Search retrieve data from the APi and send them to FilmList that display them
+          navigation={this.props.navigation}
+          //the navigation information is transmitted to enable the FilmList component to navigate to the detail of a movie
+          loadFilms={this._loadFilms} // _loadFilm load the next movies, it concerns the API, the component FilmList will just call this method when the user has browsed all the movies and it is the component Search that will provide the next movies
+          page={this.page}
+          totalPages={this.totalPages} // page info and totalPages will be useful on FilmList component side, to avoid to trigger the event that load more movie if we reached the last page
+          favoriteList={false} // we're not in the favourite list, so we can scroll to display more movies
         />
         {this._displayLoading()}
       </View>
@@ -110,8 +88,7 @@ class Search extends React.Component {
 
 const styles = StyleSheet.create({
   main_container: {
-    flex: 1,
-    //marginTop: 20 // managed by StackNavigator
+    flex: 1
   },
   textinput: {
     marginLeft: 5,
@@ -132,12 +109,4 @@ const styles = StyleSheet.create({
   }
 })
 
-//We connect the store and states favorite movies
-// to our component Search
-const mapStateToProps = state => {
-  return {
-    favoritesFilm: state.favoritesFilm
-  }
-}
-
-export default connect(mapStateToProps)(Search)
+export default Search
