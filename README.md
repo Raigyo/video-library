@@ -31,7 +31,7 @@
 
 [x] Animations with Animated library / Easing API / PanResponder API
 
-[] React Native application with native code (ejection)
+[x] React Native application with native code (ejection)
 
 ## Features
 
@@ -62,14 +62,12 @@ First you will need [Expo](https://play.google.com/store/apps/details?id=host.ex
 
 Follow these instructions: [Install Android development environment](https://facebook.github.io/react-native/docs/getting-started.html#1-install-android-studio)
 
-`react-native run-android`
-
-(if problems during building try this: `npm install react-native-gesture-handler@1.0.5`)
+- `react-native run-android` (if you meet problems during building try this: `npm install react-native-gesture-handler@1.0.5`)
 
 If there are too many problem during building restart from scratch:
 
 - `react-native init MyVideoLibrary`
-- Copy these files from this repo: App.js / Animations / API / Components / Helpers / Images / Navigation / Store
+- Copy these files/folders from this repo: App.js / Animations / API / Components / Helpers / Images / Navigation / Store
 - Run:
 
 ~~~
@@ -92,6 +90,7 @@ react-native link
 `npm install --save numeral`
 
 `npm install --save react-navigation`
+
 `npm install --save react-native-gesture-handler`
 
 ## Redux
