@@ -11,7 +11,7 @@
 
 ## Content of tutorial
 
-[x] React Native Init vs Create React Native App
+[x] Create React Native App (Expo CLI Quickstart) / React Native Init (React Native CLI Quickstart)
 
 [x] Components React Native
 
@@ -31,7 +31,7 @@
 
 [x] Animations with Animated library / Easing API / PanResponder API
 
-[] React Native application with native code
+[] React Native application with native code (ejection)
 
 ## Features
 
