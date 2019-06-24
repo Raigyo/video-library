@@ -33,6 +33,10 @@
 
 [x] React Native application with native code (ejection) / Permissions
 
+[x] Debug Tools
+
+[x] Persist and rehydrate a redux store
+
 ## Features
 
 Video Library mobile application displaying movies and their descriptions using API TMDB.
@@ -114,6 +118,8 @@ npm install --save redux
 
 npm install --save react-redux
 
+npm install --save redux-persist
+
 ~~~~
 
 Redux is used to manage general states (here for favourites)
@@ -180,3 +186,5 @@ Rename **API/TMDBApi.exemple.js** in **API/TMDBApi.js** and replace `<YOUR_TOKEN
 [React Native Styling Cheat Sheet](https://github.com/vhpoet/react-native-styling-cheat-sheet)
 
 [Native Directory](https://www.native.directory/)
+
+[Redux Persist](https://github.com/rt2zz/redux-persist)
