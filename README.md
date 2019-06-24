@@ -31,7 +31,7 @@
 
 [x] Animations with Animated library / Easing API / PanResponder API
 
-[x] React Native application with native code (ejection) / `link`
+[x] React Native application with native code (ejection) / Permissions
 
 ## Features
 
