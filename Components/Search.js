@@ -5,6 +5,7 @@ import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator 
 import FilmItem from './FilmItem'
 import FilmList from './FilmList'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
+import Avatar from './Avatar'
 
 class Search extends React.Component {
 
@@ -62,6 +63,9 @@ class Search extends React.Component {
   render() {
     return (
       <View style={styles.main_container}>
+        <View style={styles.avatar_container}>
+          <Avatar/>
+        </View>
         <TextInput
           style={styles.textinput}
           placeholder='Titre du film'
@@ -69,7 +73,7 @@ class Search extends React.Component {
           //props onSubmitEditing - https://facebook.github.io/react-native/docs/textinput.html#props
           onSubmitEditing={() => this._searchFilms()}
         />
-        <Button title='Rechercher' onPress={() => this._searchFilms()}/>
+        <Button title='Search' onPress={() => this._searchFilms()}/>
         <FilmList
           films={this.state.films}
           // Search retrieve data from the APi and send them to FilmList that display them
@@ -106,6 +110,12 @@ const styles = StyleSheet.create({
     bottom: 0,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  main_container: {
+    flex: 1
+  },
+  avatar_container: {
+    alignItems: 'center'
   }
 })
 

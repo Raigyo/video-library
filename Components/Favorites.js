@@ -34,9 +34,12 @@ const styles = StyleSheet.create({
 })
 
 
+//We connect the store and states favorite movies
+// to our component Search
+//we have 2 reducers so we have to define that we need toggleFavorite from store
 const mapStateToProps = state => {
   return {
-    favoritesFilm: state.favoritesFilm
+    favoritesFilm: state.toggleFavorite.favoritesFilm
   }
 }
 

@@ -11,7 +11,7 @@ const SearchStackNavigator = createStackNavigator({
   Search: {
     screen: Search, // name of the view
     navigationOptions: {
-      title: 'Rechercher'
+      title: 'Search a movie'
     }
   },
   FilmDetail: {
@@ -23,7 +23,7 @@ const FavoritesStackNavigator = createStackNavigator({
   Favorites: {
     screen: Favorites, // name of the view
     navigationOptions: {
-      title: 'Favoris'
+      title: 'Favourite movies'
     }
   },
   FilmDetail: {

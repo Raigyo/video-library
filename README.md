@@ -178,3 +178,5 @@ Rename **API/TMDBApi.exemple.js** in **API/TMDBApi.js** and replace `<YOUR_TOKEN
 [Components and APIs](https://facebook.github.io/react-native/docs/components-and-apis.html#basic-components)
 
 [React Native Styling Cheat Sheet](https://github.com/vhpoet/react-native-styling-cheat-sheet)
+
+[Native Directory](https://www.native.directory/)
