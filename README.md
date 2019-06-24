@@ -11,7 +11,7 @@
 
 ## Content of tutorial
 
-[x] Create-React-Native-App (Expo CLI Quickstart) / React Native Init (React Native CLI Quickstart)
+[x] Create-React-Native-App (Expo CLI Quickstart with Node.js) / React Native Init (React Native CLI Quickstart)
 
 [x] Components React Native
 
@@ -44,6 +44,25 @@ You can display a page with a selected movie and its datas and add it to your fa
 You can see your favourite movie list using navigation bar.
 
 You can also share your favourite movie with your friend using a specific share button according the OS.
+
+## How to launch
+(Android only, read the [doc](https://facebook.github.io/react-native/docs/getting-started.html) for IOS/Mac )
+
+First you will need [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=fr) on your Android device
+
+**With Expo / Node.js server (application-crna branch)**:
+
+`npm install -g expo-cli` (should not be nessessary if you clone this repo)
+
+`npm start`
+
+**With React Native (application-ejection)**:
+
+Follow these instructions: [Install Android development environment](https://facebook.github.io/react-native/docs/getting-started.html#1-install-android-studio)
+
+`react-native run-android`
+
+(if problems during building try this: `npm install react-native-gesture-handler@1.0.5`)
 
 ### API: request your token
 

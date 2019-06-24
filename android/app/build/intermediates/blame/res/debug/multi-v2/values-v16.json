@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/chilot/becode/react-native/video-library/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/chilot/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4922f2377e4194ced4d76d5f2cceffd9/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/chilot/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/df43b9e8c61a8779deed55f90feb10d1/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

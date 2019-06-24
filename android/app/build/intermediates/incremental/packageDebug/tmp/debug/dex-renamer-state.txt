@@ -1,0 +1,4 @@
+#Mon Jun 24 11:40:50 CEST 2019
+base.0=/home/chilot/becode/react-native/video-library/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
