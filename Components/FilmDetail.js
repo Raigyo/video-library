@@ -1,27 +1,66 @@
 // Components/FilmDetail.js
 
 import React from 'react'
-import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image, Button, TouchableOpacity} from 'react-native'
+import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image, Button, TouchableOpacity, Share, Platform} from 'react-native'
 import { getFilmDetailFromApi, getImageFromApi } from '../API/TMDBApi'
 import moment from 'moment'
 import numeral from 'numeral'
 import { connect } from 'react-redux'
 
 class FilmDetail extends React.Component {
+
+  //IOS button share top navigation
+  static navigationOptions = ({ navigation }) => {
+      const { params } = navigation.state
+      // We access the shareFilm function and the movie using the parameters added to the navigation
+      if (params.film != undefined && Platform.OS === 'ios') {
+        return {
+            //We use Touchable to display an image
+            headerRight: <TouchableOpacity
+                            style={styles.share_touchable_headerrightbutton}
+                            onPress={() => params.shareFilm()}>
+                            <Image
+                              style={styles.share_image}
+                              source={require('../Images/ic_share.png')} />
+                          </TouchableOpacity>
+        }
+      }
+  }
+
   constructor(props) {
     super(props)
     this.state = {
       film: undefined, // the movie has not been loaded yet
       isLoading: true // loading when the view is opened
     }
+     this._shareFilm = this._shareFilm.bind(this) //IOS share: we have to bind otherwise it will be undefined
+  }
+
+  //IOS share: Function to switch the _shareFilm function and movie to the navigation settings. So we will have access to these datas when when we will the headerRight
+  _updateNavigationParams() {
+    this.props.navigation.setParams({
+      shareFilm: this._shareFilm,
+      film: this.state.film
+    })
   }
 
   componentDidMount() {
+    // IOS share: when the movie is loaded, we update the navigation settings (with the function _updateNavigationParams) to display the share button
+    const favoriteFilmIndex = this.props.favoritesFilm.findIndex(item => item.id === this.props.navigation.state.params.idFilm)
+    if (favoriteFilmIndex !== -1) {
+      this.setState({
+        film: this.props.favoritesFilm[favoriteFilmIndex]
+      }, () => { this._updateNavigationParams() })
+      return
+    }
+
+    this.setState({ isLoading: true })
+    //retrieve film details from API
     getFilmDetailFromApi(this.props.navigation.state.params.idFilm).then(data => {
       this.setState({
         film: data,
         isLoading: false
-      })
+      }, () => { this._updateNavigationParams() })
     })
   }
 
@@ -42,11 +81,19 @@ class FilmDetail extends React.Component {
     }
   }
 
-  _toggleFavorite() {
-      const action = { type: "TOGGLE_FAVORITE", value: this.state.film }
-      this.props.dispatch(action)
+  //share function - warning: empty message on FB due to FB policy
+  async _shareFilm() {
+    const { film } = this.state
+
+    try {
+      await Share.share({ title: film.title, message: film.overview })
+      console.log('successfully opened a share');
+    } catch (e) {
+      console.log('some sort of problem sharing device info out: ', e);
+    }
   }
 
+  //display film file
   _displayFilm() {
     const { film } = this.state
     if (film != undefined) {
@@ -82,6 +129,13 @@ class FilmDetail extends React.Component {
     }
   }
 
+  //toggle heart/favourite
+  _toggleFavorite() {
+      const action = { type: "TOGGLE_FAVORITE", value: this.state.film }
+      this.props.dispatch(action)
+  }
+
+  //display heart/favourite
   _displayFavoriteImage() {
       var sourceImage = require('../Images/ic_favorite_border.png')
       if (this.props.favoritesFilm.findIndex(item => item.id === this.state.film.id) !== -1) {
@@ -96,12 +150,29 @@ class FilmDetail extends React.Component {
       )
   }
 
+  //Android: floating button share
+  _displayFloatingActionButton() {
+    const { film } = this.state
+    if (film != undefined && Platform.OS === 'android') { // on Android when the movie is loaded
+      return (
+        <TouchableOpacity
+          style={styles.share_touchable_floatingactionbutton}
+          onPress={() => this._shareFilm()}>
+          <Image
+            style={styles.share_image}
+            source={require('../Images/ic_share.png')} />
+        </TouchableOpacity>
+      )
+    }
+  }
+
   render() {
     //console.log(this.props)
     return (
       <View style={styles.main_container}>
         {this._displayLoading()}
         {this._displayFilm()}
+        {this._displayFloatingActionButton()}
       </View>
     )
   }
@@ -156,7 +227,25 @@ const styles = StyleSheet.create({
   favorite_image: {
     width: 40,
     height: 40
-  }
+  },
+  share_touchable_floatingactionbutton: {
+   position: 'absolute',
+   width: 60,
+   height: 60,
+   right: 30,
+   bottom: 30,
+   borderRadius: 30,
+   backgroundColor: '#e91e63',
+   justifyContent: 'center',
+   alignItems: 'center'
+  },//Android
+  share_image: {
+   width: 30,
+   height: 30
+  },//Android
+  share_touchable_headerrightbutton: {
+  marginRight: 8
+  }//IOS
 })
 
 const mapStateToProps = (state) => {
