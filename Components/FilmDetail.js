@@ -6,6 +6,7 @@ import { getFilmDetailFromApi, getImageFromApi } from '../API/TMDBApi'
 import moment from 'moment'
 import numeral from 'numeral'
 import { connect } from 'react-redux'
+import EnlargeShrink from '../Animations/EnlargeShrink'
 
 class FilmDetail extends React.Component {
 
@@ -137,17 +138,21 @@ class FilmDetail extends React.Component {
 
   //display heart/favourite
   _displayFavoriteImage() {
-      var sourceImage = require('../Images/ic_favorite_border.png')
-      if (this.props.favoritesFilm.findIndex(item => item.id === this.state.film.id) !== -1) {
-        // Film dans nos favoris
-        sourceImage = require('../Images/ic_favorite.png')
-      }
-      return (
+    var sourceImage = require('../Images/ic_favorite_border.png')
+    var shouldEnlarge = false // By default. On click  => shouldEnlarge to true
+    if (this.props.favoritesFilm.findIndex(item => item.id === this.state.film.id) !== -1) {
+      sourceImage = require('../Images/ic_favorite.png')
+      shouldEnlarge = true // If the movie in the favourite. . On click  => shouldEnlarge to false
+    }
+    return (
+      <EnlargeShrink
+        shouldEnlarge={shouldEnlarge}>
         <Image
           style={styles.favorite_image}
           source={sourceImage}
         />
-      )
+      </EnlargeShrink>
+    )
   }
 
   //Android: floating button share
@@ -224,9 +229,10 @@ const styles = StyleSheet.create({
   favorite_container: {
     alignItems: 'center', // align child component on x axis
   },
-  favorite_image: {
-    width: 40,
-    height: 40
+  favorite_image:{
+    flex: 1,
+    width: null,
+    height: null
   },
   share_touchable_floatingactionbutton: {
    position: 'absolute',

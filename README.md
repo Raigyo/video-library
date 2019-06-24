@@ -1,4 +1,4 @@
-# Becode - React Native / Redux - Video Library -  WIP
+# Becode - React Native (CRNA) / Redux: Video Library -  WIP
 
 ![Becode logo](https://raw.githubusercontent.com/Raigyo/react-character-manager/master/img/becode-logo.png)
 
@@ -30,6 +30,8 @@
 [x] Specific development (IOS vs Android): API Share
 
 [x] Animations with Animated library / Easing API / PanResponder API
+
+[] React Native application with native code
 
 ## Features
 

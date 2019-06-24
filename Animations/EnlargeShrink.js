@@ -18,7 +18,7 @@ class EnlargeShrink extends React.Component {
     }
     return 40
   }
-  // La méthode componentDidUpdate est exécuté chaque fois que le component est mise à jour, c'est l'endroit parfait pour lancer / relancer notre animation.
+  // componentDidUpdate : the animation / component is reloaded each time there is an update
   componentDidUpdate() {
     Animated.spring(
       this.state.viewSize,
