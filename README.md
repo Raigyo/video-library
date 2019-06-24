@@ -31,11 +31,9 @@
 
 [x] Animations with Animated library / Easing API / PanResponder API
 
-[x] React Native application with native code (ejection) 
+[x] React Native application with native code (ejection) / `link`
 
 ## Features
-
-**WIP**
 
 Video Library mobile application displaying movies and their descriptions using API TMDB.
 
@@ -85,22 +83,37 @@ react-native link
 
 ## Libraries used:
 
+Moment
+
 `npm install --save moment`
+
+Numeral
 
 `npm install --save numeral`
 
+Navigation
+
 `npm install --save react-navigation`
+
+Gesture Handler
 
 `npm install --save react-native-gesture-handler`
 
-## Redux
+Image Picker
+
+~~~~
+npm install --save react-native-image-picker
+
+react-native link
+~~~~
+
+Redux
 
 ~~~~
 npm install --save redux
 
 npm install --save react-redux
 
-npm install
 ~~~~
 
 Redux is used to manage general states (here for favourites)
