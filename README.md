@@ -23,13 +23,13 @@
 
 [x] Component Lifecycle
 
-[x] Redux architecture (Actions - Reducers - Store - Views) and states management
+[x] Redux architecture (Actions / Reducers / Store / Views) and states management
 
-[x] Context of a component (Data Binding)
+[x] Context of a component (Data Binding / `_this` / arrow functions)
 
-[x] Specific development (IOS vs Android)
+[x] Specific development (IOS vs Android): API Share
 
-[x] API Share
+[x] Animations with Animated library / Easing API / PanResponder API
 
 ## Features
 
