@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Jun 24 11:40:50 CEST 2019
+#Mon Jun 24 14:43:42 CEST 2019
 17.baseType=DIRECTORY
 4.path=lib/x86/libimagepipeline.so
 25.base=/home/chilot/becode/react-native/video-library/android/app/build/intermediates/transforms/mergeJniLibs/debug/0

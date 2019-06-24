@@ -436,6 +436,10 @@
         "source": "/home/chilot/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4922f2377e4194ced4d76d5f2cceffd9/res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
+        "merged": "/home/chilot/becode/react-native/video-library/android/app/build/intermediates/res/merged/debug/xml_provider_paths.xml.flat",
+        "source": "/home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/packaged_res/debug/xml/provider_paths.xml"
+    },
+    {
         "merged": "/home/chilot/becode/react-native/video-library/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "/home/chilot/becode/react-native/video-library/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
@@ -1258,6 +1262,10 @@
     {
         "merged": "/home/chilot/becode/react-native/video-library/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/home/chilot/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4922f2377e4194ced4d76d5f2cceffd9/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/home/chilot/becode/react-native/video-library/android/app/build/intermediates/res/merged/debug/layout_list_item.xml.flat",
+        "source": "/home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/packaged_res/debug/layout/list_item.xml"
     },
     {
         "merged": "/home/chilot/becode/react-native/video-library/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
