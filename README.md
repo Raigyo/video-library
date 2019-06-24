@@ -52,9 +52,11 @@ First you will need [Expo](https://play.google.com/store/apps/details?id=host.ex
 
 **With Expo / Node.js server (application-crna branch)**:
 
-`npm install -g expo-cli` (should not be nessessary if you clone this repo)
+- `npm install -g expo-cli` (should not be nessessary if you clone this repo)
 
-`npm start`
+- `npm start`
+
+- Open the url provided by the server then scan the QR code with the Expo app on your Android device
 
 **With React Native (application-ejection)**:
 
@@ -64,17 +66,33 @@ Follow these instructions: [Install Android development environment](https://fac
 
 (if problems during building try this: `npm install react-native-gesture-handler@1.0.5`)
 
-### API: request your token
+If there are too many problem during building restart from scratch:
 
-Connect and suscribe to [API TMDB (The Movie DataBase)](https://www.themoviedb.org/) and ask for a token/api key (v3 auth).
+- `react-native init MyVideoLibrary`
+- Copy these files from this repo: App.js / Animations / API / Components / Helpers / Images / Navigation / Store
+- Run:
 
-Rename **API/TMDBApi.exemple.js** in **API/TMDBApi.js** and replace `<YOUR_TOKEN_HERE>` by the token provided by API TMDB.
+~~~
+npm install --save react-navigation
+npm install --save react-native-gesture-handler
+npm install --save moment
+npm install --save numeral
+npm install --save redux
+npm install --save react-redux
+npm install
+react-native link
+~~~
+
+- `react-native run-android`
 
 ## Libraries used:
 
 `npm install --save moment`
 
 `npm install --save numeral`
+
+`npm install --save react-navigation`
+`npm install --save react-native-gesture-handler`
 
 ## Redux
 
@@ -85,6 +103,8 @@ npm install --save react-redux
 
 npm install
 ~~~~
+
+Redux is used to manage general states (here for favourites)
 
 - L'utilisateur clique sur le bouton "Favoris" dans le component FilmDetail.
 
@@ -99,6 +119,12 @@ npm install
 - Redux va détecter un changement dans son store, sur la liste des films favoris, et va envoyer la nouvelle liste de films favoris aux components abonnés à ses changements.
 
 - Le component FilmDetail reçoit la liste des nouveaux films, la mappe à ses props et lance le cycle de vie updating pour se re-rendre.
+
+### API: request your token
+
+Connect and suscribe to [API TMDB (The Movie DataBase)](https://www.themoviedb.org/) and ask for a token/api key (v3 auth).
+
+Rename **API/TMDBApi.exemple.js** in **API/TMDBApi.js** and replace `<YOUR_TOKEN_HERE>` by the token provided by API TMDB.
 
 
 ## Useful links
