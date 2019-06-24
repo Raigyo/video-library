@@ -1,0 +1,3 @@
+rootProject.name = 'MyVideoLibrary'
+
+include ':app'

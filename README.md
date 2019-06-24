@@ -11,7 +11,7 @@
 
 ## Content of tutorial
 
-[x] Create React Native App (Expo CLI Quickstart) / React Native Init (React Native CLI Quickstart)
+[x] Create-React-Native-App (Expo CLI Quickstart) / React Native Init (React Native CLI Quickstart)
 
 [x] Components React Native
 
