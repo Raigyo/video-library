@@ -1,0 +1,183 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12
+MERGED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:2:1-23:12
+MERGED from [:react-native-gesture-handler] /home/chilot/becode/react-native/video-library/node_modules/react-native-gesture-handler/android/build/intermediates/manifests/full/release/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.57.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/react-native-0.57.1.aar/dbb6f67dc4f73d3f63c466a2393623a6/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4922f2377e4194ced4d76d5f2cceffd9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/edadd2fa7c1c8493edae73778fc82eed/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/99511dd3c7e806ad4992db8f773e9e56/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/f8d70ab8d4298f660a3ed5f446a6cd9f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/cf410a8cd961bfd3f14e9f303193f8b4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/eae58914ecc5e105c0872832d3f8f743/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/df43b9e8c61a8779deed55f90feb10d1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/deba5278181a295a2cce29fa76ac6d7c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/1b6c4ce0e612adbf77a48a3781dd6e7c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/ae85897ec79c6d9302afed14d4b4bd02/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/088c9405d029a6f9a596f7bcf14a4a69/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/741f82d63337c452887fa9f67a714faa/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.5.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/5d215959b3dc52843cc6d779696bd331/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r174650] /home/chilot/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/2f0235e4378b1cecd1ceaf311a3c6865/AndroidManifest.xml:1:1-3:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/757d3870126df9b31f79a4b957873049/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/269ffeff32626fb6aef43a4272091e4a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/70a6e914389490d1a8837b270903619f/AndroidManifest.xml:2:1-9:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/870d7f1cf36980d3fe5194964f1b8a7b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/5b12d5261020764714f2b29c6e3f5543/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12
+	package
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:2:5-33
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.CAMERA
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:3:5-65
+	android:name
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:3:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:4:5-80
+	android:name
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:4:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:6:5-77
+MERGED from [com.facebook.react:react-native:0.57.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/react-native-0.57.1.aar/dbb6f67dc4f73d3f63c466a2393623a6/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.57.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/react-native-0.57.1.aar/dbb6f67dc4f73d3f63c466a2393623a6/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:6:22-75
+application
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:8:5-25:19
+MERGED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:11:5-21:19
+MERGED from [com.facebook.react:react-native:0.57.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/react-native-0.57.1.aar/dbb6f67dc4f73d3f63c466a2393623a6/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.57.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/react-native-0.57.1.aar/dbb6f67dc4f73d3f63c466a2393623a6/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/5d215959b3dc52843cc6d779696bd331/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/5d215959b3dc52843cc6d779696bd331/AndroidManifest.xml:11:5-20
+MERGED from [org.webkit:android-jsc:r174650] /home/chilot/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/2f0235e4378b1cecd1ceaf311a3c6865/AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] /home/chilot/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/2f0235e4378b1cecd1ceaf311a3c6865/AndroidManifest.xml:2:3-17
+	android:label
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:10:7-39
+	android:icon
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:11:7-41
+	android:allowBackup
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:12:7-34
+	android:theme
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:13:7-38
+	android:name
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:9:7-38
+activity#com.myvideolibrary.MainActivity
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:14:7-23:18
+	android:label
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:16:9-41
+	android:windowSoftInputMode
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:18:9-51
+	android:configChanges
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:17:9-79
+	android:name
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:15:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:19:9-22:25
+action#android.intent.action.MAIN
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:20:13-65
+	android:name
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:20:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:21:13-73
+	android:name
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:21:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:24:7-84
+	android:name
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:24:17-81
+uses-sdk
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/chilot/becode/react-native/video-library/node_modules/react-native-gesture-handler/android/build/intermediates/manifests/full/release/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/chilot/becode/react-native/video-library/node_modules/react-native-gesture-handler/android/build/intermediates/manifests/full/release/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.57.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/react-native-0.57.1.aar/dbb6f67dc4f73d3f63c466a2393623a6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.57.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/react-native-0.57.1.aar/dbb6f67dc4f73d3f63c466a2393623a6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4922f2377e4194ced4d76d5f2cceffd9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4922f2377e4194ced4d76d5f2cceffd9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/edadd2fa7c1c8493edae73778fc82eed/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/edadd2fa7c1c8493edae73778fc82eed/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/99511dd3c7e806ad4992db8f773e9e56/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/99511dd3c7e806ad4992db8f773e9e56/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/f8d70ab8d4298f660a3ed5f446a6cd9f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/f8d70ab8d4298f660a3ed5f446a6cd9f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/cf410a8cd961bfd3f14e9f303193f8b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/cf410a8cd961bfd3f14e9f303193f8b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/eae58914ecc5e105c0872832d3f8f743/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/eae58914ecc5e105c0872832d3f8f743/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/df43b9e8c61a8779deed55f90feb10d1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/df43b9e8c61a8779deed55f90feb10d1/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/deba5278181a295a2cce29fa76ac6d7c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/deba5278181a295a2cce29fa76ac6d7c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/1b6c4ce0e612adbf77a48a3781dd6e7c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/1b6c4ce0e612adbf77a48a3781dd6e7c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/ae85897ec79c6d9302afed14d4b4bd02/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/ae85897ec79c6d9302afed14d4b4bd02/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/088c9405d029a6f9a596f7bcf14a4a69/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/088c9405d029a6f9a596f7bcf14a4a69/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/741f82d63337c452887fa9f67a714faa/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/741f82d63337c452887fa9f67a714faa/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/5d215959b3dc52843cc6d779696bd331/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] /home/chilot/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/5d215959b3dc52843cc6d779696bd331/AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/757d3870126df9b31f79a4b957873049/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/757d3870126df9b31f79a4b957873049/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/269ffeff32626fb6aef43a4272091e4a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/269ffeff32626fb6aef43a4272091e4a/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/70a6e914389490d1a8837b270903619f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/70a6e914389490d1a8837b270903619f/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/870d7f1cf36980d3fe5194964f1b8a7b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/870d7f1cf36980d3fe5194964f1b8a7b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/5b12d5261020764714f2b29c6e3f5543/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/chilot/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/5b12d5261020764714f2b29c6e3f5543/AndroidManifest.xml:20:5-44
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml
+provider#com.imagepicker.FileProvider
+ADDED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:14:13-60
+	android:exported
+		ADDED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:13:13-56
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:17:13-19:58
+	android:resource
+		ADDED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:19:17-55
+	android:name
+		ADDED from [:react-native-image-picker] /home/chilot/becode/react-native/video-library/node_modules/react-native-image-picker/android/build/intermediates/manifests/full/release/AndroidManifest.xml:18:17-67
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /home/chilot/becode/react-native/video-library/android/app/src/main/AndroidManifest.xml:1:1-27:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE

@@ -10,3 +10,9 @@ report.*
 package-lock.json
 package-lock.*
 my-key.keystore
+my-release-key.keystore
+gradle.*
+android/gradle.properties
+*gradle.properties*
+.android/app/build.gradle
+*build.gradle*
