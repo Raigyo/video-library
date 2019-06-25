@@ -41,11 +41,21 @@
 
 Video Library mobile application displaying movies and their descriptions using API TMDB.
 
-You can display a page with a selected movie and its datas and add it to your favourites.
+The navigation bar will let you choose between 3 views:
 
-You can see your favourite movie list using navigation bar.
+*Search* view: You can display a page with a selected movie and its datas and add it to your favourites. You can also share your favourite movie with your friend using a specific share button according the OS.
 
-You can also share your favourite movie with your friend using a specific share button according the OS.
+*Favourite movies* view: You can see your favourite movie list.
+
+*Latest movies* view: You can see the latest movies available on theatre.
+
+Extra features:
+
+- You can add an avatar in the application using your camera or your photo-gallery
+
+- Works on Android and IOS
+
+- Data is persistent
 
 ## How to launch
 (Android only, read the [doc](https://facebook.github.io/react-native/docs/getting-started.html) for IOS/Mac )
@@ -124,19 +134,19 @@ npm install --save redux-persist
 
 Redux is used to manage general states (here for favourites)
 
-- L'utilisateur clique sur le bouton "Favoris" dans le component FilmDetail.
+- The user clicks the "Favourites" button in the *FilmDetail* component.
 
-- On crée une action avec le type "TOGGLE_FAVORITE"  et en valeur, le film affiché.
+- We create an action with the type "TOGGLE_FAVORITE" the film displayed as value.
 
-- On fait passer l'action au store Redux.
+- We move the action to the Redux store.
 
-- Le store Redux donne l'action (dispatch) à un reducer capable de gérer l'action de type "TOGGLE_FAVORITE".
+- The Redux store dispatches the action to a reducer able to manage the action with type *"TOGGLE_FAVORITE"*.
 
-- Le reducer  toggleFavorite  va recevoir l'action et va modifier le state de votre application.
+- The reducer *toggleFavorite* will receive the action and will change the state of your application.
 
-- Redux va détecter un changement dans son store, sur la liste des films favoris, et va envoyer la nouvelle liste de films favoris aux components abonnés à ses changements.
+- Redux will detect a change in its store in the list of favorite movies, and will send the new list to the components that suscribe to its changes.
 
-- Le component FilmDetail reçoit la liste des nouveaux films, la mappe à ses props et lance le cycle de vie updating pour se re-rendre.
+- The *FilmDetail* component receives the list of new movies, maps it to its props, and launches the update lifecycle to re-render itself.
 
 ### API: request your token
 
