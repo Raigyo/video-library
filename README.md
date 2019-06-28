@@ -1,4 +1,4 @@
-# Becode - React Native (CRNA) / Redux: Video Library -  WIP
+# Becode - React Native (CRNA) / Redux: Video Library
 
 ![Becode logo](https://raw.githubusercontent.com/Raigyo/react-character-manager/master/img/becode-logo.png)
 
