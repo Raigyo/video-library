@@ -9,7 +9,7 @@
 
 * * *
 
-##Google play
+## Available on Google play
 
 The application is available on Google Play (beta version): [My Video Library](https://play.google.com/store/apps/details?id=com.myvideolibrary)
 
