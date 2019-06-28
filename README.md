@@ -9,6 +9,10 @@
 
 * * *
 
+##Google play
+
+The application is available on Google Play (beta version): [My Video Library](https://play.google.com/store/apps/details?id=com.myvideolibrary)
+
 ## Content of tutorial
 
 [x] Create-React-Native-App (Expo CLI Quickstart with Node.js) / React Native Init (React Native CLI Quickstart)
