@@ -13,6 +13,8 @@
 
 The application is available on Google Play (beta version): [My Video Library](https://play.google.com/store/apps/details?id=com.myvideolibrary)
 
+See also my watch [about redux](https://docs.google.com/presentation/d/1EvizpkOZKV1wntQODdG3H05CArLIxwIG46INIvsqdDI/edit?usp=sharing)
+
 ## Content of tutorial
 
 [x] Create-React-Native-App (Expo CLI Quickstart with Node.js) / React Native Init (React Native CLI Quickstart)
